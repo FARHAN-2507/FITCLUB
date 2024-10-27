@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools</title>
+    <link rel="stylesheet" href="tools.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav__logo">
+            <a href="/index.html"><img src="/assets/logo.png" alt="logo" /></a>
+        </div>
+        <ul class="nav__links">
+            <li class="link"><a href="/index.html">Home</a></li>
+            <li class="link"><a href="/index.html">Program</a></li>
+            <li class="link"><a href="/tools/tools.html">Tools</a></li>
+            <li class="link"><a href="/diet plan/diet.html">Diet</a></li>
+            <li class="link"><a href="/articles/article.html">Article</a></li>
+            <li class="link"><a href="/store/store.html">Store</a></li>
+            <li class="link"><a href="/exercises/exercise.html">Exercises</a></li>
+
+
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <div class="image">
+            <img src="/tools/img/tools.jpg" alt="Banner image">
+        </div>
+        <div class="overlay">
+            <h1>Tools & Calculators</h1>
+            <p>Track your progress and measure your strength with these fitness tools and calculators.</p>
+        </div>
+    </div>
+
+
+    <div class="workouts">
+        <h1>
+            FITNESS TOOLS
+        </h1>
+    </div>
+    <div class="subheading">
+        <p>
+            Our fitness tools are designed to make it easy to calculate calorie requiements, macros, body fat percentage
+            and strength goals.Here are some of our favorite tools to help youClick on the tool you want to use:</p>
+
+    </div>
+
+    <div class="wrapper">
+        <ul class="calculator-list">
+            <li class="calculator-item">
+                <div class="calculator-header">
+                    <span class="arrow">&#9660;</span> BMI CALCULATOR
+                </div>
+                <div class="calculator-content">
+
+                    <!-- Calculator 1 content goes here -->
+                    <div class="bmi-calculator-container">
+
+
+                        <div class="content">
+                            <h2>UNDERSTANDING YOUR BODY MASS INDEX</h2>
+                            <p>
+                                Now that you know your body mass index you are one step closer to mastering your overall
+                                health. Find out how to understand your BMI
+                                <br><br>
+
+                                <strong>If your BMI is below 18.5</strong>: Your BMI is considered underweight. Keep in
+                                mind that an underweight BMI calculation may pose certain health risks. Please consult
+                                your healthcare provider for more information about BMI calculations.
+                                <br><br>
+                                <strong>If your BMI is between 18.5 – 24.9</strong>: Your BMI is considered normal. This
+                                healthy weight helps reduce your risk of serious health conditions and means you’re
+                                close to your fitness goals.<br><br>
+                                <strong>If your BMI is between 25 – 29.9</strong>: You’re in the overweight range. You
+                                are at increased risk for a variety of illnesses at your present weight. You should lose
+                                weight by changing your diet and exercising more.<br><br>
+                                <strong>If your BMI is above 30</strong>: Your BMI is considered overweight. Being
+                                overweight may increase your risk of cardiovascular disease. Consider making lifestyle
+                                changes through healthy eating and fitness to improve your health.<br><br>
+                                <strong>Individuals who fall into the BMI range of 25 to 34.9, and have a waist size of
+                                    over 40 inches for men and 35 inches for women, are considered to be at especially
+                                    high risk for health problems.</strong><br><br>
+                            </p>
+                        </div>
+
+                        <div class="calc__container">
+
+
+                            <h2>BMI Calculator</h2>
+                            <div>
+                                <label for="height">Height (cm):</label>
+                                <input type="number" id="height" placeholder="Enter your height">
+                            </div>
+                            <div>
+                                <label for="weight">Weight (kg):</label>
+                                <input type="number" id="weight" placeholder="Enter your weight">
+                            </div>
+                            <button onclick="calculateBMI()">Calculate BMI</button>
+                            <div id="result"></div>
+                            
+                        </div>
+
+                    </div>
+
+            </li>
+
+
+    </div>
+
+    <li class="calculator-item">
+        <div class="calculator-header">
+            <span class="arrow">&#9660;</span> BODY FAT %
+        </div>
+        <div class="calculator-content">
+            <!-- Calculator 2 content goes here -->
+            <div id="fat-calculator">
+                <h2>Body Fat Percentage Calculator</h2>
+                <label for="newbmi">ENTER YOUR BMI</label>
+                <input type="number" id="newbmi" placeholder="Enter BMI">
+                <label for="age">ENTER YOUR AGE</label>
+                <input type="number" id="age" placeholder="Enter Age">
+                <div>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <button onclick="calculateBodyFatPercentage()">Calculate</button>
+                <div id="newresult"></div>
+            </div>
+
+
+
+        </div>
+    </li>
+    <li class="calculator-item">
+        <div class="calculator-header">
+            <span class="arrow">&#9660;</span> BMR(Basal Metabolic Rate) Calculator
+        </div>
+        <div class="calculator-content">
+            <!-- Calculator 3 content goes here -->
+            <div class="container">
+                <h1>BMR Calculator</h1>
+                <form id="bmrForm">
+                    <div class="form-group">
+                        <label for="weight1">Weight (kg):</label>
+                        <input type="number" id="weight1" name="weight" required placeholder="Enter weight">
+                    </div>
+                    <div class="form-group">
+                        <label for="height">Height (cm):</label>
+                        <input type="number" id="height1" name="height" required placeholder="Enter Height">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age1" name="age" required placeholder="Enter Age">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender1" name="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <button type="button" onclick="calculateBMR()">Calculate BMR</button>
+                </form>
+                <div id="result2"></div>
+            </div>
+            <div class="content">
+                <p>The basal metabolic rate (BMR) and calorie calculator is an excellent tool for estimating how many calories your body needs on a daily basis depending on the amount and intensity of your exercise regime.</p>
+            </div>
+        </div>
+    </li>
+    <li class="calculator-item">
+        <div class="calculator-header">
+            <span class="arrow">&#9660;</span> CALORIES COUNT
+        </div>
+        <div class="calculator-content">
+            <!-- Calculator 2 content goes here -->
+            <div class="container">
+                <h1>Indian Food Calories Calculator</h1>
+                <div class="calculator">
+                  <div class="select-container">
+                    <label for="food-select">Select Food:</label>
+                    <select id="food-select">
+                      <option value="0">--Select Food--</option>
+                      <option value="200,8,4,30,5">Biryani </option>
+                      <option value="250,10,5,20,7">Paneer Tikka </option>
+                      <option value="150,6,3,25,3">Chole Bhature </option>
+                      <option value="120,3,2,20,2">Masala Dosa </option>
+                      <option value="50,3,2,10,1">Dal </option>
+                      <option value="100,4,2,20,1">Roti </option>
+                      <option value="130,1,1,30,0.5">Rice </option>
+                    </select>
+                    <label for="quantity">Quantity (grams):</label>
+                    <input type="number" id="quantity" min="1" value="100">
+                    <button onclick="addFood()">Add Food</button>
+                  </div>
+                  <div id="food-list">
+                    <h2>Selected Foods:</h2>
+                    <ul id="selected-foods"></ul>
+                  </div>
+                  <div id="total">
+                    <h2>Total Nutrient Facts:</h2>
+                    <div id="nutrient-facts"></div>
+                    <button id="reset-button" onclick="resetCalculator()">Reset Calculator</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </li>
+    <!-- Add more calculator items as needed -->
+    </ul>
+    </div>
+
+    <footer class="section__container footer__container">
+
+        <div class="footer__col">
+            <div class="footer__logo"><img src="/assets/logo.png" alt="logo" /></div>
+            <p>
+                Take the first step towards a healthier, stronger you with our
+                unbeatable personalized plans. Let's sweat, achieve, and conquer together!
+            </p>
+            <div class="footer__socials">
+                <a href="https://www.facebook.com/farhan.akthar.313371/" target="_blank"><i
+                        class="ri-facebook-fill"></i></a>
+                <a href="https://www.instagram.com/farhan.akthar.25/" target="_blank"><i
+                        class="ri-instagram-line"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="ri-twitter-fill"></i></a>
+            </div>
+        </div>
+        <div class="footer__col">
+            <h4>Company</h4>
+            <a href="#">Business</a>
+            <a href="#">Franchise</a>
+            <a href="#">Partnership</a>
+            <a href="#">Network</a>
+        </div>
+        <div class="footer__col">
+            <h4>About Us</h4>
+            <a href="#">Blogs</a>
+            <a href="#">Security</a>
+            <a href="#">Careers</a>
+        </div>
+        <div class="footer__col">
+            <h4>Contact</h4>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">BMI Calculator</a>
+        </div>
+    </footer>
+    <div class="footer__bar">
+        Copyright © 2024 MD.FARHAN BCA SEC - C . All rights reserved.
+    </div>
+
+
+
+
+
+    <script src="/tools/tools.js"></script>
+</body>
+
+</html>
